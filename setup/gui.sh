@@ -24,7 +24,10 @@ sudo pacman -U --noconfirm brave.pkg.tar.zst
 curl -fsSL https://tailscale.com/install.sh | sh
 
 # 🧱 Flatpak installieren (falls noch nicht installiert)
-sudo pacman -S --noconfirm flatpak
+if ! command -v flatpak &>/dev/null; then
+  echo "📦 Installiere Flatpak..."
+  sudo pacman -S --noconfirm flatpak
+fi
 
 # 🧱 Flatpak Anwendungen installieren
 flatpak install -y flathub md.obsidian.Obsidian
