@@ -1,0 +1,18 @@
+[ui]
+background = "#1d2021"
+foreground = "#ebdbb2"
+cursor = "#fabd2f"
+selection_bg = "#3c3836"
+selection_fg = "#fbf1c7"
+statusline_fg = "#b8bb26"
+statusline_bg = "#1d2021"
+statusline_active = "#83a598"
+statusline_inactive = "#504945"
+
+[syntax]
+comment = "#928374"
+constant = "#d3869b"
+identifier = "#fabd2f"
+statement = "#fe8019"
+type = "#8ec07c"
+special = "#83a598"
