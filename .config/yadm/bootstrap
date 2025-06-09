@@ -1,18 +1,11 @@
 #!/bin/bash
-
 set -e
-
-echo "🚀 YADM Bootstrap gestartet..."
-
-# Abfrage: Desktop oder Headless
-read -rp "Installierst du ein Desktop-System? (y/n): " use_desktop
-
-if [[ "$use_desktop" == "y" || "$use_desktop" == "Y" ]]; then
-  echo "🖥️ Starte Desktop-Setup..."
-  bash "$HOME/setup/gui.sh"
+echo "🚀 Starte YADM-Bootstrap..."
+read -rp "Installierst du ein Desktop-System (GUI)? (y/n): " use_gui
+if [[ "$use_gui" == "y" || "$use_gui" == "Y" ]]; then
+  echo "🖥️ Starte GUI-Setup..."
+  bash ~/setup/gui##gui.sh
 else
   echo "🧠 Starte Headless-Setup..."
-  bash "$HOME/setup/headless.sh"
+  bash ~/setup/headless.sh
 fi
-
-echo "✅ Bootstrap abgeschlossen. Viel Spaß mit deinem System!"
