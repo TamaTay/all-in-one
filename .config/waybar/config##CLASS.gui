@@ -1,0 +1,39 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu", "memory", "temperature", "battery", "network", "tray"],
+  "clock": {
+    "format": "{:%a %d %b  %H:%M}",
+    "tooltip-format": "{:%Y-%m-%d | Kalender\nWeek %V}",
+    "on-click": "foot -e cal -3"
+  },
+  "cpu": {
+    "format": "CPU: {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "RAM: {}%",
+    "tooltip": false
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "🌡️ {}°C"
+  },
+  "battery": {
+    "format": "🔋 {capacity}%",
+    "format-charging": "⚡ {capacity}%"
+  },
+  "network": {
+    "format-wifi": "📶 {essid} ({signalStrength}%)",
+    "format-ethernet": "🌐 Ethernet",
+    "format-disconnected": "⛔",
+    "on-click": "nm-connection-editor"
+  },
+  "tray": {
+    "icon-size": 14,
+    "spacing": 10
+  }
+}

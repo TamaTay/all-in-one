@@ -1,0 +1,90 @@
+# Gruvbox Style Colors
+$background = rgba(282828ee)
+$border     = rgba(458588ee)
+$active     = rgba(fabd2fee)
+$inactive   = rgba(3c3836cc)
+
+# Monitor (automatisch)
+monitor=,preferred,auto,1
+
+# Input + Touchpad
+input {
+  kb_layout = de
+  follow_mouse = 1
+  touchpad {
+    natural_scroll = true
+    scroll_factor = 0.2
+    clickfinger_behavior = true
+    disable_while_typing = true
+  }
+  sensitivity = 0
+  repeat_rate = 30
+  repeat_delay = 300
+}
+
+gestures {
+  workspace_swipe = true
+  workspace_swipe_fingers = 4
+}
+
+# Fensterdeko
+general {
+  gaps_in = 5
+  gaps_out = 15
+  border_size = 2
+  col.active_border = $active
+  col.inactive_border = $inactive
+}
+
+decoration {
+  rounding = 6
+  blur {
+    enabled = true
+    size = 6
+    passes = 3
+  }
+  drop_shadow = true
+  shadow_range = 20
+  shadow_render_power = 3
+  col.shadow = rgba(00000055)
+}
+
+animations {
+  enabled = true
+  bezier = ease,0.5,0.0,0.2,1.0
+  animation = windows, 1, 3, ease
+  animation = fade, 1, 3, ease
+  animation = workspaces, 1, 3, ease
+}
+
+# Fensterregeln
+windowrulev2 = float,class:^(nm-connection-editor)$
+
+# Autostart
+exec-once = swww init && swww img ~/wallpapers/dein_wallpaper.png
+exec-once = waybar
+
+# Programme starten
+bind = SUPER, T, exec, kitty
+bind = SUPER, F, exec, yazi
+bind = SUPER, S, exec, grimblast --notify --freeze copy area
+bind = SUPER, ESCAPE, exec, loginctl lock-session
+bind = SUPER, L, exec, loginctl lock-session
+
+# Fokus bewegen mit Pfeiltasten
+bind = SUPER, LEFT, focuswindow, l
+bind = SUPER, RIGHT, focuswindow, r
+bind = SUPER, UP, focuswindow, u
+bind = SUPER, DOWN, focuswindow, d
+
+# Fenster verschieben mit Shift + Pfeiltasten
+bind = SUPER SHIFT, LEFT, movewindow, l
+bind = SUPER SHIFT, RIGHT, movewindow, r
+bind = SUPER SHIFT, UP, movewindow, u
+bind = SUPER SHIFT, DOWN, movewindow, d
+
+# Workspace-Wechsel per Tastatur
+bind = SUPER, 1, workspace, 1
+bind = SUPER, 2, workspace, 2
+bind = SUPER, 3, workspace, 3
+bind = SUPER, 4, workspace, 4

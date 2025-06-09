@@ -1,18 +1,24 @@
-[ui]
-background = "#1d2021"
-foreground = "#ebdbb2"
-cursor = "#fabd2f"
-selection_bg = "#3c3836"
-selection_fg = "#fbf1c7"
-statusline_fg = "#b8bb26"
-statusline_bg = "#1d2021"
-statusline_active = "#83a598"
-statusline_inactive = "#504945"
+[default]
+fg = "#ebdbb2"
+bg = "#282828"
+title = "#fabd2f"
+highlight = { fg = "#282828", bg = "#fabd2f", bold = true }
 
 [syntax]
 comment = "#928374"
-constant = "#d3869b"
-identifier = "#fabd2f"
-statement = "#fe8019"
-type = "#8ec07c"
-special = "#83a598"
+keyword = "#fb4934"
+string = "#b8bb26"
+function = "#83a598"
+type = "#d3869b"
+
+[filetype]
+directory = "#458588"
+symlink = "#83a598"
+executable = "#b8bb26"
+image = "#d3869b"
+video = "#fe8019"
+audio = "#b16286"
+archive = "#cc241d"
+document = "#83a598"
+code = "#fabd2f"
+other = "#928374"

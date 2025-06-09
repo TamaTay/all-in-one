@@ -1,0 +1,19 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	sharedrepository = 0600
+	worktree = /home/tt
+[receive]
+	denyNonFastforwards = true
+[remote "origin"]
+	url = https://github.com/TamaTay/all-in-one.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[status]
+	showUntrackedFiles = no
+[yadm]
+	managed = true

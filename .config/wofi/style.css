@@ -1,1 +1,33 @@
-# Wofi style (GUI only)
+* {
+  font-family: "monospace";
+  font-size: 14px;
+  color: #ebdbb2;
+  background-color: #282828;
+}
+
+window {
+  background-color: #282828;
+  border: 2px solid #458588;
+  border-radius: 8px;
+}
+
+#input {
+  padding: 6px;
+  border: none;
+  background-color: #3c3836;
+  color: #ebdbb2;
+}
+
+#entry {
+  padding: 4px 8px;
+}
+
+#entry:selected {
+  background-color: #fabd2f;
+  color: #282828;
+  font-weight: bold;
+}
+
+#scroll {
+  margin-top: 5px;
+}

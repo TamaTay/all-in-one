@@ -1,11 +1,12 @@
 #!/bin/bash
-set -e
-echo "🚀 Starte YADM-Bootstrap..."
-read -rp "Installierst du ein Desktop-System (GUI)? (y/n): " use_gui
-if [[ "$use_gui" == "y" || "$use_gui" == "Y" ]]; then
-  echo "🖥️ Starte GUI-Setup..."
-  bash ~/setup/gui##gui.sh
-else
-  echo "🧠 Starte Headless-Setup..."
+
+# --- Detect System Type ---
+if grep -qi "debian\|ubuntu" /etc/os-release; then
+  echo "[BOOTSTRAP] Debian/Ubuntu erkannt – Headless-Setup wird ausgeführt."
+  yadm alt -s CLASS.headless
   bash ~/setup/headless.sh
+else
+  echo "[BOOTSTRAP] Arch-basiertes System erkannt – GUI-Setup wird ausgeführt."
+  yadm alt -s CLASS.gui
+  bash ~/setup/gui.sh
 fi
