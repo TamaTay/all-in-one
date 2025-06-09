@@ -1,0 +1,7 @@
+prompt=🔍
+show=drun
+width=30%
+height=40%
+location=center
+hide_scroll=true
+term=kitty
